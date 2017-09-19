@@ -3,7 +3,8 @@
 
 	angular.module('data')
 	.component('categories', {
-		templateUrl: 'templates/categories.template.html',
+		templateUrl: 'templates/categoriesList.template.html',
+		controller: 'menuDataCtrl',
 		biddings:{
 			categories: '<'
 		}

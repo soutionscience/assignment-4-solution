@@ -24,7 +24,7 @@
 	     		method: "Get",
 	     		url:("https://davids-restaurant.herokuapp.com/categories.json"),
 	     		params:{
-	     			category: shortName
+	     			category: categoryShortName
 	     		}
 	     	});
 		

@@ -14,6 +14,18 @@ body{
 }
 .home{
 	background-color: rgba( 0,0,0, .8);
+    width: 100%;
 	padding: 4px;
 	font-size: 1.3em;
+	display: inline-block;
+	text-align: center;
+}
+}
+
+.home p{
+		background-color: rgba( 0,0,0, .8);
+		margin: 2px;
+		padding: 2px;
+
+
 }

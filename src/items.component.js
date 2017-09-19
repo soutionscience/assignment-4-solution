@@ -2,7 +2,7 @@
 
 	angular.module('data')
 	.component('items', {
-		tempateUrl: 'templates/items.template.html',
+		tempateUrl: 'templates/itemList.template.html',
 		biddings: {
 			items: '<'
 		}
