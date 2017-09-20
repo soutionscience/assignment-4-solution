@@ -1,10 +1,8 @@
-
 <section>
-	 <div class ="container home" ng-repeat="e in  data">
-	 	<a ui-sref="items({categoryItem: e.short_name})">{{e.name}}</a>
-
-<!--  <p>{{e.name}}</p> -->
- </div>
- </section>
 	
-</ul>
+	<div class ="home" ng-repeat="e in $ctrl.categories">
+
+		<a ui-sref="items({categoryItem: e.short_name})">{{e.name}}</a>
+		
+	</div>
+</section>

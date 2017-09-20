@@ -1,13 +1,12 @@
 (function(){
 
 
-	angular.module('data')
-	.component('categories', {
+	angular.module('MenuApp')
+	.component('categoriesComponent', {
 		templateUrl: 'templates/categoriesList.template.html',
-		controller: 'menuDataCtrl',
-		biddings:{
-			categories: '<'
-		}
+	   bindings:{
+		 	categories: '<'
+		 }
 	})
 
 })();

@@ -3,25 +3,16 @@
 	angular.module('data')
 	.controller('menuDataCtrl', menuDataCtrl);
 
-	menuDataCtrl.$inject =['$scope', 'MenuDataService']
+	menuDataCtrl.$inject =['$scope', 'MenuDataService','categories']
 
 
-	function menuDataCtrl($scope, MenuDataService){
+	function menuDataCtrl($scope, MenuDataService, categories){
 		var menu = this;
-		var promise
-		var promise2
-		var categoryname = "L"
-		promise = MenuDataService.getAllCategories()
-       promise.then(function(result){
+	    menu.categories = categories.data;
 
-       	$scope.data= result.data
-       menu.categories = $scope.data;
-       	console.log($scope.data[0].short_name)
-       }).
-       catch(function(error){
-       	console.log("something went wrong")
-       })
+	    //$scope.data = menu.categories;
 
+	    //console.log(menu.categories)
 
 
        
