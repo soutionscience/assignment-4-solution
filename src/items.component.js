@@ -1,11 +1,15 @@
-(function(){
 
-	angular.module('data')
+(function(){
+	'use restrict';
+
+
+	angular.module('MenuApp')
 	.component('items', {
-		tempateUrl: 'templates/itemList.template.html',
-		biddings: {
-			items: '<'
-		}
+
+		templateUrl: 'templates/itemList.template.html',
+	   bindings:{
+		 	myItemList: '<'
+		 }
 	})
 
 })();

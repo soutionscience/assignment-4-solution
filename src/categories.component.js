@@ -2,10 +2,10 @@
 
 
 	angular.module('MenuApp')
-	.component('categoriesComponent', {
+	.component('categories', {
 		templateUrl: 'templates/categoriesList.template.html',
 	   bindings:{
-		 	categories: '<'
+		 	mycategories: '<'
 		 }
 	})
 

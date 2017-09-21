@@ -11,14 +11,13 @@
 
 
 		$stateProvider
-		.state('/',{
-			url: '/',
-			controller: 'menuDataCtrl as mainlist',
-			templateUrl:'/templates/home.template.html'
-		})
+		.state('home', {
+                url: '/',
+                templateUrl: '/templates/home.template.html'
+            })
 		.state('categories',{
 			url:'/categories',
-			controller: 'menuDataCtrl as mainlist',
+			controller: 'categoriesCtrl as mainList',
 			templateUrl:'/templates/categories.template.html',
 			resolve: {
 				categories:['MenuDataService' , function(MenuDataService){
@@ -29,28 +28,19 @@
 			}
 		})
 		
-        .state('items',{
-			url: '/items/{categoryItem}',
-			controller: 'menuDataCtrl',
-			templateUrl:'/templates/items.template.html'
-			 // resolve:{
-			// 	item:['$stateParams', 'MenuDataService', function(){
-			// 		return MenuDataService.getItemsForCategory(categoryItem).then(function(categories){
-			// 			console.log(categories[$stateParamscategoryItem])
-			// 			return categories[$stateParams.short_name]
+               .state('items', {
+                url: '/items/{shortname}',
+                templateUrl: '/templates/items.template.html',
+                controller: 'itemsCtrl as  itemList',
+                  resolve: {
+                    itemsList: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
+                        var result =  MenuDataService.getItemsForCategory($stateParams.shortname);
+                      
 
-			// 		})
-
-			// 	}]
-
-			// }
-		 })
-
-
-
-
-
-		;
+                        return result;
+                    }],
+                }
+            });
 
 	}
 })();

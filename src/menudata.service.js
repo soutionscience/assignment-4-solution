@@ -19,13 +19,16 @@
 		return response;
 	},
 
-	     service.getItemsForCategory= function(categoryShortName){
-	     	var response = $http({
+	     service.getItemsForCategory= function(categoriesShortName){
+	     	return $http({
 	     		method: "Get",
-	     		url:("https://davids-restaurant.herokuapp.com/categories.json"),
+	     		url:("https://davids-restaurant.herokuapp.com/menu_items.json"),
 	     		params:{
-	     			category: categoryShortName
+	     			category: categoriesShortName
 	     		}
+	     	})
+	     	.then(function(result){
+	     		return result.data;
 	     	});
 		
 	}

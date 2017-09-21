@@ -29,3 +29,15 @@ body{
 
 
 }
+.description , .name {
+	background-color: red;
+   text-align: left;
+   width: 100%;
+}
+.row{
+	width: 100%;
+	text-align: left;
+}
+.row h5{
+	text-decoration: underline;
+}

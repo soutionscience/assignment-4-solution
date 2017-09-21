@@ -1,1 +1,41 @@
-<h1>Test 1</h1>
+<section><h1 class="heading">Items</h1>
+<div class="home" ng-repeat="e in dataset">
+
+
+	<div class ="row container">
+		<div class="col-md-2">
+			<h5>Name</h5>
+			{{e.name}}
+		</div>
+
+		<div class="col-md-4" >
+			<h5>Description</h5>
+			{{e.description}}
+		</div>
+
+		<div class="col-md-1">
+			<h5>Large Name</h5>
+			{{e.large_portion_name}}
+		</div>
+
+
+		<div class="col-md-1">
+			<h5>Large Price</h5>
+			{{e.price_large}}
+		</div>
+
+		<div class="col-md-2">
+			<h5>Small Name</h5>
+			{{e.small_portion_name}}
+		</div>
+
+		<div class="col-md-1">
+			<h5>Small Price</h5>
+			{{e.price_small}}
+		</div>
+
+	</div>
+</div>
+	
+<items myItemList ="itemList.items"></component>
+</section>
